@@ -10,6 +10,8 @@ import Project from "../Models/ProjectModel";
 
 export const ProjectDetailController = async(req:Request,res:Response)=>{
     try{
+    const {userPrompt} = req.body;
+    const products = await Project.find();
     
     }
     catch(e)
