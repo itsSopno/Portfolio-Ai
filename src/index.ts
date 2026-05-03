@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import connectDB from './config/db';
 import routes from './routes';
+import { testAi } from './Gemini/gemini';
 
 dotenv.config();
 
@@ -38,3 +39,5 @@ app.use((err: any, req: Request, res: Response, next: express.NextFunction) => {
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
+testAi();
