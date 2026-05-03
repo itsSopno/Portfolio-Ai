@@ -9,7 +9,7 @@ export interface User extends Document {
     socialLinks: {
         github?: string;
         linkedin?: string;
-        twitter?: string;
+        facebook?: string;
     }
 }
 
@@ -22,7 +22,7 @@ const userSchema = new Schema<User>({
     socialLinks: {
         github: { type: String },
         linkedin: { type: String },
-        twitter: { type: String }
+        facebook: { type: String }
     }
 });
 

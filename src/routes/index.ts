@@ -6,6 +6,7 @@ import {
     updateProject, 
     deleteProject 
 } from '../controller/ProjectController';
+import { ProjectDetailController } from '../controller/geminiController';
 
 const router = Router();
 
@@ -20,5 +21,8 @@ router.get('/projects', getProjects);
 router.get('/projects/:id', getProjectById);
 router.put('/projects/:id', updateProject);
 router.delete('/projects/:id', deleteProject);
+
+// AI Route
+router.post('/ask-ai', ProjectDetailController);
 
 export default router;
